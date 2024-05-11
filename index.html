@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" >
+         <div class="calculator">
+       <div class="box1">
+        <form action="">
+            <input type="text" name="display"  class="displayField">
+          </form>
+       </div><!------box1----->
+       <div class="box">
+        <input type="button" value="AC" onclick="displayField.value='' "  style="color:rgb(5, 255, 5)">
+        <input type="button" value="DE" onclick="displayField.value=displayField.value.toString().slice(0,-1)"  style="color:rgb(5, 255, 5)">
+        <input type="button" value="." onclick="displayField.value +='.' "  style="color:rgb(5, 255, 5)">
+        <input type="button" value="/" onclick="displayField.value +='/' "  style="color:rgb(5, 255, 5)">
+       </div><!----box2---->
+       <div class="box">
+        <input type="button" value="7" onclick="displayField.value +='7' ">
+        <input type="button" value="8" onclick="displayField.value +='8' ">
+        <input type="button" value="9" onclick="displayField.value +='9' ">
+        <input type="button" value="*" onclick="displayField.value +='*' "  style="color:rgb(5, 255, 5)">
+       </div><!----box2----->
+        <div class="box">
+      <input type="button" value="4" onclick="displayField.value +='4' ">
+      <input type="button" value="5" onclick="displayField.value +='5' ">
+      <input type="button" value="6" onclick="displayField.value +='6' ">
+      <input type="button" value="-" onclick="displayField.value +='-' "  style="color:rgb(5, 255, 5)">
+        </div><!-----box3----->
+        <div class="box">
+      <input type="button" value="1" onclick="displayField.value +='1' ">
+      <input type="button" value="2" onclick="displayField.value +='2' ">
+      <input type="button" value="3" onclick="displayField.value +='3' ">
+      <input type="button" value="+" onclick="displayField.value +='+' "  style="color:rgb(5, 255, 5)">
+        </div><!-----box4----->
+        <div class="box">
+        <input type="button" value="00" onclick="displayField.value +='00' ">
+        <input type="button" value="0"  onclick="displayField.value +='0' ">
+        <input type="button" value="="  onclick="displayField.value = eval(displayField.value)" class="equal"  style="color:rgb(5, 255, 5)">
+        </div>
+         </div><!-----calculator------>
+    </div><!-----conatiner----->
+    <script>
+       let displayField=document.querySelector(".displayField");
+    </script>
+</body>
+</html>
